@@ -15,6 +15,7 @@ import java.io.IOException;
 
 public class GameController {
 
+
     private Stage stage;
     private Scene scene;
     public Parent root;
@@ -27,8 +28,10 @@ public class GameController {
     private TextArea textAreaSafari;
     @FXML
     private TextArea textAreaWoods;
-
-    @FXML private TextArea textAreaWasteland;
+    @FXML
+    private TextArea textAreaOutside;
+    @FXML
+    private TextArea textAreaWasteland;
 
     private int talkCounter = 1;
 
@@ -42,7 +45,7 @@ public class GameController {
         stage.show();
     }
 
-    public void goToOutside(ActionEvent event) throws IOException {
+    public void goToOutside() throws IOException {
         Main.stage.getScene().setRoot(new Region());
         Main.stage.setScene(Main.gameScene);
         Main.stage.show();
@@ -196,32 +199,25 @@ public class GameController {
     public void talkToWastelandNPC(ActionEvent actionEvent) {
         updateWastelandText();
     }
+    public void talkToOutsideNPC(ActionEvent actionEvent) {
+        updateOutsideText();
+    }
     private void updateOfficeText() {
         switch (talkCounter) {
             case 1:
                 textAreaOffice.clear();
-                textAreaOffice.appendText("Hey, my name is Joe. I'm your personal assistant here at our Park.");
+                textAreaOffice.appendText("Hey, welcome to our Office.");
+                textAreaOffice.appendText("This is where you'll do your taxes and cry.");
+                textAreaOffice.appendText("\nThis is also where you relax after doing your taxes.");
                 break;
             case 2:
                 textAreaOffice.clear();
-                textAreaOffice.appendText("This room is our office. This is where you'll do your taxes and cry.");
-                textAreaOffice.appendText("\nThis is also where you relax after doing your taxes.");
+                textAreaOffice.appendText("There's not much in this room right now.");
+                textAreaOffice.appendText("\nBut if you want, you can stay and chill a bit.");
+                textAreaOffice.appendText("\nDon't chill for too long, though.");
+                textAreaOffice.appendText("\nSabrina might need your help with some Poachers.");
                 break;
-            case 3:
-                textAreaOffice.clear();
-                textAreaOffice.appendText("Your job is to make sure that our Park is doing well.");
-                textAreaOffice.appendText("\nYou can do that by navigating the different rooms " +
-                        "\nand talking to the workers.");
-                textAreaOffice.appendText("\nSabrina stands for making sure the Safari is doing well. " +
-                        "\nChuck makes sure the Woods are doing well.");
-                break;
-            case 4:
-                textAreaOffice.clear();
-                textAreaOffice.appendText("If you speak to them, you can learn more about different problems" +
-                        "\nwe face with poaching, deforestation and environmental degradation.");
-                textAreaOffice.appendText("\nThey will also quiz you on what you've learnt," +
-                        "\nin order to make sure you have paid attention.");
-                break;
+
         }
         talkCounter++;
     }
@@ -229,53 +225,76 @@ public class GameController {
         switch (talkCounter) {
             case 1:
                 textAreaWoods.clear();
-                textAreaWoods.appendText("Hi my name is chuck \nI will teach you about Deforestation and Degradation." +
+                textAreaWoods.appendText("Hi my name is Chuck." +
+                        "\nI will teach you about Deforestation and Environmental Degradation." +
                         "\nDeforestation is defined as the process where forested areas disappear" +
-                        "\ndue to human activities such as logging, often to free up land for " +
+                        "\ndue to human activities such as logging, often to free up land for" +
                         "\nagriculture, mining, or other commercial purposes.");
 
                 break;
             case 2:
                 textAreaWoods.clear();
-                textAreaWoods.appendText("Consequences of Deforestation: \n" +
-
-                        "Deforestation is mentioned to have severe consequences for the \nenvironment,biodiversity, and the people living in those areas. \nAdditionally, it is pointed out that deforestation can also impact the \nclimate since trees absorb significant amounts of \nCO2 from the atmosphere.");
+                textAreaWoods.appendText("Deforestation is mentioned to have severe consequences for the" +
+                        "\nenvironment, biodiversity and the people living in those areas." +
+                        "\nAdditionally, it is pointed out that deforestation can also impact the" +
+                        "\nclimate since trees absorb significant amounts of " +
+                        "\nCO2 from the atmosphere.");
                 break;
             case 3:
                 textAreaWoods.clear();
-                textAreaWoods.appendText("Legislation to Stop Deforestation: \n" +
-                        "The European Parliament has approved a new law that halts the sale of \ncommodities such as palm oil, cocoa, coffee, soy, cattle, \nand timber in the EU if they originate from areas where there has been \ndeforestation or forest degradation since the beginning of 2021. \nThis also applies to products like shoes, furniture, and chocolate.");
+                textAreaWoods.appendText("The European Parliament has approved a law that halts the sale of" +
+                        "\ncommodities such as palm oil, cocoa, coffee, soy, cattle," +
+                        "\nand timber in the EU if they originate from areas where there has been" +
+                        "\ndeforestation or forest degradation since the beginning of 2021." +
+                        "\nThis also applies to products like shoes, furniture, and chocolate.");
                 break;
             case 4:
                 textAreaWoods.clear();
-                textAreaWoods.appendText("Purpose of the Law: \n" +
-
-                        "The purpose of the law is to protect forests globally, \nincluding the Amazon, Indonesia's rainforests, and European \nforest areas under significant pressure. \nIt aims to halt or minimize deforestation and forest degradation. \n" +
-                        "\n" ) ;
+                textAreaWoods.appendText("It's illegal to cut trees at a large scale without a permit." +
+                        "\nThe reason for that is to protect forests globally, " +
+                        "\nincluding the Amazon, Indonesia's rainforests, and European" +
+                        "\nforest areas under significant pressure." +
+                        "\nIt aims to halt or minimize deforestation and forest degradation.");
                 break;
 
             case 5:
                 textAreaWoods.clear();
-                textAreaWoods.appendText("Statistics on Forest Loss: " +
-                        "\n" +
-                        "According to the UN, more than 420 million hectares of forest \n disappeared between 1990 and 2020, equivalent to an area \nlarger than all EU countries combined. \nAnnually, an area the size of Portugal is lost. ");
+                textAreaWoods.appendText("According to the UN, more than 420 million hectares of forest " +
+                        "\ndisappeared between 1990 and 2020, equivalent to an area" +
+                        "\nlarger than all EU countries combined." +
+                        "\nAnnually, an area the size of Portugal is lost." +
+                        "\nThis is why we pay so much attention to it not happening at our Park.");
                 break;
             case 6:
                 textAreaWoods.clear();
-                textAreaWoods.appendText(" Effect on Consumer Habits: \n" +
-                        "\n" +
-                        "Consumers are encouraged to expect that the products they purchase \ndo not contribute to deforestation or forest degradation, \ntaking a step towards combating global deforestation. \n" +
-                        "The article provides an overview of how deforestation \nimpacts the environment and human lives and how \nlegislation is attempting to address this issue. ");
+                textAreaWoods.appendText("If you as a consumer wants to help, it is wise to buy products" +
+                        "\nthat do not contribute to deforestation or forest degradation," +
+                        "\ntaking a step towards combating global deforestation." +
+                        "\nDeforestation impacts the environment and human lives in a lot of ways," +
+                        "\nbut they're all bad.");
                 break;
 
             case 7 :
                 textAreaWoods.clear();
-                textAreaWoods.appendText(" and now about degradation  " ); //skriv mere
+                textAreaWoods.appendText("All of the different problems, deforestation, poaching and biodiversity loss included" +
+                        "\nare some of the causes of environmental degradation." +
+                        "\nEnvironmental degradation is a huge problem globally, as it means the land that we live on slowly" +
+                        "\nbecomes uninhabitable, for humans, animals and plants alike." +
+                        "\nSoil becomes unusable for humans to grow crops, while the plants that keep the animals" +
+                        "\nalive all slowly begin struggling to grow.");
                 break ;
 
             case 8 :
                 textAreaWoods.clear();
-                textAreaWoods.appendText(" I think its enough information now lets begin with the quiz  " );
+                textAreaWoods.appendText("Soil erosion is a big part of it. Erosion is caused by over-exploitation" +
+                        "\nof the soil. It reduces the fertility of the soil. Combined with a potential increase of salinity" +
+                        "\nit can end up affecting the ability for plants to absorb water and nutrients." +
+                        "\nAll this leads to a circle in which plants can't grow, which means the soil doesn't get nutrients" +
+                        "\nfrom all the dead plant matter. Which in turn makes it even worse." );
+                break ;
+            case 9 :
+                textAreaWoods.clear();
+                textAreaWoods.appendText("");
                 break ;
 
         }
@@ -351,6 +370,35 @@ public class GameController {
                         "That's why we need to find the people who are responsible, to stop this. \n" +
                         "I know that there´s a poacher walking around killing animals, \n" +
                         "and cutting trees. Make him stop, please.");
+        }
+        talkCounter++;
+    }
+    private void updateOutsideText() {
+        switch (talkCounter) {
+            case 1:
+                textAreaOutside.clear();
+                textAreaOutside.appendText("Hey, my name is Joe. I'm your personal assistant here at our Park.");
+                break;
+            case 2:
+                textAreaOutside.clear();
+                textAreaOutside.appendText("This is the main hub of our Park. The Outside.");
+                textAreaOutside.appendText("\nThis is connected to all the other parts of our Park.");
+                break;
+            case 3:
+                textAreaOutside.clear();
+                textAreaOutside.appendText("Your job is to make sure that our Park is doing well.");
+                textAreaOutside.appendText("\nYou can do that by navigating the different rooms " +
+                        "\nand talking to the workers.");
+                textAreaOutside.appendText("\nSabrina stands for making sure the Safari is doing well." +
+                        "\nChuck makes sure the Woods are doing well.");
+                break;
+            case 4:
+                textAreaOutside.clear();
+                textAreaOutside.appendText("If you speak to them, you can learn more about different problems" +
+                        "\nwe face with poaching, deforestation and environmental degradation.");
+                textAreaOutside.appendText("\nThey will also quiz you on what you've learnt," +
+                        "\nin order to make sure you have paid attention.");
+                break;
         }
         talkCounter++;
     }

@@ -41,7 +41,9 @@ public class WoodsQuizQuestionController extends GameController implements Initi
 
     private void loadWoodQuestions() {
         if (counter == 0) {
-            textAreaQuiz.appendText("1. What is defined as deforestation in the text?" +
+            textAreaQuiz.appendText("First up, the Deforestation and Environmental degradation Quiz!!!" +
+                    "\n There's 8 Questions in each part." +
+                    "\n 1. What is defined as deforestation in the text?" +
                     "\n A: An increase in forested areas." +
                     "\n B: A process of planting more trees. " +
                     "\n C: The removal of forest areas due to human activity. " +
@@ -116,14 +118,102 @@ public class WoodsQuizQuestionController extends GameController implements Initi
             opt2.setText("B");
             opt3.setText("C");
             opt4.setText("D");
-        }
-        else if (counter == 7) {
+        } else if (counter == 7) {
             textAreaQuiz.clear();
             textAreaQuiz.appendText("8.What is the overarching message regarding the role of individuals and governments in addressing deforestation?" +
                     "\n A:  Individuals and governments have no role in addressing deforestation . " +
                     "\n B:  Governments alone are responsible for combating deforestation." +
                     "\n C:  Implementing conservation measures, such as habitat preservation, sustainable resource management, and combating illegal wildlife trade, is crucial for protecting biodiversity." +
                     "\n D:  Only global initiatives can effectively address deforestation.");
+            opt1.setText("A");
+            opt2.setText("B");
+            opt3.setText("C");
+            opt4.setText("D");
+        } else if (counter == 8) {
+            textAreaQuiz.appendText("And now for the Poaching and Biodiversity part of the Quiz!!!!" +
+                    "\n 1. What is poaching?" +
+                    "\n A: The act of illegally hunting animals in nature. Usually done to rare, exotic or threatened species." +
+                    "\n B: A person that takes care of animals in an animal conservation center. " +
+                    "\n C: A tourist who takes pictures of animals. " +
+                    "\n D: A person who specializes in identifying different species of animals");
+            opt1.setText("A");
+            opt2.setText("B");
+            opt3.setText("C");
+            opt4.setText("D");
+        } else if (counter == 9) {
+            textAreaQuiz.clear();
+            textAreaQuiz.appendText("2. What are the consequence of poaching?" +
+                    "\n A: Extinction of animals and loss of biodiversity." +
+                    "\n B: Increases biodiversity." +
+                    "\n C: Boosts population growth of certain species." +
+                    "\n D: Promotes balance in the ecosystem.");
+            opt1.setText("A");
+            opt2.setText("B");
+            opt3.setText("C");
+            opt4.setText("D");
+        } else if (counter == 10) {
+            textAreaQuiz.clear();
+            textAreaQuiz.appendText("3. Where does the most poaching happen?" +
+                    "\n A: Poaching is most prevalent in protected wildlife reserves where animals are well-guarded." +
+                    "\n B: Poaching is a significant issue in various parts of Africa and Asia, where demand for exotic animal products is high, leading to the illegal hunting of endangered species." +
+                    "\n C: Poaching primarily occurs in regions with extreme climates, as it makes it easier for poachers to evade authorities." +
+                    "\n D: Poaching is more common in areas with low biodiversity, as there is less demand for rare animals.");
+            opt1.setText("A");
+            opt2.setText("B");
+            opt3.setText("C");
+            opt4.setText("D");
+        } else if (counter == 11) {
+            textAreaQuiz.clear();
+            textAreaQuiz.appendText("4. Where does the most poaching happen?" +
+                    "\n A: Poaching is most prevalent in protected wildlife reserves where animals are well-guarded." +
+                    "\n B: Poaching is more common in areas with low biodiversity, as there is less demand for rare animals." +
+                    "\n C: Poaching primarily occurs in regions with extreme climates, as it makes it easier for poachers to evade authorities." +
+                    "\n D: Poaching is a significant issue in various parts of Africa and Asia, where demand for exotic animal products is high, leading to the illegal hunting of endangered species.");
+
+            opt1.setText("A");
+            opt2.setText("B");
+            opt3.setText("C");
+            opt4.setText("D");
+        } else if (counter == 12) {
+            textAreaQuiz.clear();
+            textAreaQuiz.appendText("5. What is biodiversity?" +
+                    "\n A: It is the absence of animals, plants and microorganisms." +
+                    "\n B: The different forms of life found in one place, such as a variety of animals, plants, fungi and microorganisms." +
+                    "\n C: It is a computer- generated world different from the real world. It's a complex virtual environment made by machines to simulate life." +
+                    "\n D: It is a spiritual connection between different ecosystems.");
+            opt1.setText("A");
+            opt2.setText("B");
+            opt3.setText("C");
+            opt4.setText("D");
+        } else if (counter == 13) {
+            textAreaQuiz.clear();
+            textAreaQuiz.appendText("6. Why is biodiversity important?" +
+                    "\n A: Biodiversity is not important; it only serves aesthetic purposes in nature." +
+                    "\n B: Biodiversity is crucial because it ensures that all species live in perfect harmony without any competition." +
+                    "\n C: Biodiversity is important solely for the economic benefits it provides, such as the commercial value of rare animal species." +
+                    "\n D: Biodiversity is essential for ecosystem stability, resilience, and the overall health of the planet, supporting various ecological functions and services.");
+            opt1.setText("A");
+            opt2.setText("B");
+            opt3.setText("C");
+            opt4.setText("D");
+        } else if (counter == 14) {
+            textAreaQuiz.clear();
+            textAreaQuiz.appendText("7. How does genetic diversity contribute to the resilience of a population in the face of environmental changes?" +
+                    "\n A: To protect biodiversity, it's best to domesticate wild animals and keep them as pets to ensure their safety." +
+                    "\n B: Building more highways and infrastructure in natural habitats is an effective way to safeguard biodiversity by providing animals with new living spaces." +
+                    "\n C: Implementing conservation measures, such as habitat preservation, sustainable resource management, and combating illegal wildlife trade, is crucial for protecting biodiversity." +
+                    "\n D: Biodiversity is preserved by introducing non-native species to different ecosystems to enhance their diversity.");
+            opt1.setText("A");
+            opt2.setText("B");
+            opt3.setText("C");
+            opt4.setText("D");
+        } else if (counter == 15) {
+            textAreaQuiz.clear();
+            textAreaQuiz.appendText("8. How do you protect biodiversity?" +
+                    "\n A: To protect biodiversity, it's best to domesticate wild animals and keep them as pets to ensure their safety." +
+                    "\n B: Building more highways and infrastructure in natural habitats is an effective way to safeguard biodiversity by providing animals with new living spaces." +
+                    "\n C: Implementing conservation measures, such as habitat preservation, sustainable resource management, and combating illegal wildlife trade, is crucial for protecting biodiversity." +
+                    "\n D: Biodiversity is preserved by introducing non-native species to different ecosystems to enhance their diversity.");
             opt1.setText("A");
             opt2.setText("B");
             opt3.setText("C");
@@ -140,7 +230,7 @@ public class WoodsQuizQuestionController extends GameController implements Initi
             wrong = wrong + 1;
         }
 
-        if (counter == 7) {
+        if (counter == 15) {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("WoodsResults.fxml"));
                 root = loader.load();
@@ -169,7 +259,7 @@ public class WoodsQuizQuestionController extends GameController implements Initi
             wrong = wrong + 1;
         }
 
-        if (counter == 5) {
+        if (counter == 15) {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("WoodsResults.fxml"));
                 root = loader.load();
@@ -198,7 +288,7 @@ public class WoodsQuizQuestionController extends GameController implements Initi
             wrong = wrong + 1;
         }
 
-        if (counter == 5) {
+        if (counter == 15) {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("WoodsResults.fxml"));
                 root = loader.load();
@@ -227,7 +317,7 @@ public class WoodsQuizQuestionController extends GameController implements Initi
             wrong = wrong + 1;
         }
 
-        if (counter == 5) {
+        if (counter == 15) {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("WoodsResults.fxml"));
                 root = loader.load();
@@ -271,6 +361,30 @@ public class WoodsQuizQuestionController extends GameController implements Initi
             return answer.equals("C");
         }
         if (counter == 7) {
+            return answer.equals("B");
+        }
+        if (counter == 8) {
+            return answer.equals("C");
+        }
+        if (counter == 9) {
+            return answer.equals("C");
+        }
+        if (counter == 10) {
+            return answer.equals("D");
+        }
+        if (counter == 11) {
+            return answer.equals("A");
+        }
+        if (counter == 12) {
+            return answer.equals("B");
+        }
+        if (counter == 13) {
+            return answer.equals("B");
+        }
+        if (counter == 14) {
+            return answer.equals("C");
+        }
+        if (counter == 15) {
             return answer.equals("B");
         }
         return false;
