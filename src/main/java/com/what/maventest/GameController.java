@@ -83,7 +83,8 @@ public class GameController {
                         "\nI will teach you about Deforestation and Environmental Degradation.");
                 break;
             case 2:
-                textAreaWoods.appendText("\nDeforestation is defined as the process where forested areas disappear" +
+                textAreaWoods.clear();
+                textAreaWoods.appendText("Deforestation is defined as the process where forested areas disappear" +
                         "\ndue to human activities such as logging, often to free up land for" +
                         "\nagriculture, mining, or other commercial purposes.");
 
