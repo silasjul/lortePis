@@ -130,6 +130,7 @@ public class WoodsQuizQuestionController extends GameController implements Initi
             opt3.setText("C");
             opt4.setText("D");
         } else if (counter == 8) {
+            textAreaQuiz.clear();
             textAreaQuiz.appendText("And now for the Poaching and Biodiversity part of the Quiz!!!!" +
                     "\n 1. What is poaching?" +
                     "\n A: The act of illegally hunting animals in nature. Usually done to rare, exotic or threatened species." +
@@ -290,55 +291,7 @@ public class WoodsQuizQuestionController extends GameController implements Initi
     }
 
     boolean checkAnswer(String answer) {
-
-        if (counter == 0) {
-            return answer.equals("C");
-        }
-        if (counter == 1) {
-            return answer.equals("C");
-        }
-        if (counter == 2) {
-            return answer.equals("D");
-        }
-        if (counter == 3) {
-            return answer.equals("A");
-        }
-        if (counter == 4) {
-            return answer.equals("B");
-        }
-        if (counter == 5) {
-            return answer.equals("B");
-        }
-        if (counter == 6) {
-            return answer.equals("C");
-        }
-        if (counter == 7) {
-            return answer.equals("B");
-        }
-        if (counter == 8) {
-            return answer.equals("C");
-        }
-        if (counter == 9) {
-            return answer.equals("C");
-        }
-        if (counter == 10) {
-            return answer.equals("D");
-        }
-        if (counter == 11) {
-            return answer.equals("A");
-        }
-        if (counter == 12) {
-            return answer.equals("B");
-        }
-        if (counter == 13) {
-            return answer.equals("B");
-        }
-        if (counter == 14) {
-            return answer.equals("C");
-        }
-        if (counter == 15) {
-            return answer.equals("B");
-        }
-        return false;
+        String[] correctAnswer = {"C", "C", "C", "D", "A", "B", "B", "C", "B", "C", "C", "C", "C", "C", "C", "C"};
+        return correctAnswer[counter].equals(answer);
     }
 }

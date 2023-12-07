@@ -18,9 +18,6 @@ public class WoodsQuizResultController {
     public TextArea WoodsResults;
 
     public Button goBackToWoods;
-    private Stage stage;
-    private Parent root;
-    private GameController gameController;
     @FXML
     private void initialize() {
 
@@ -44,22 +41,5 @@ public class WoodsQuizResultController {
             WoodsResults.appendText("\nOh yes, Perfect ! You nailed this quiz!!! you deserve an icecream!");
             WoodsResults.appendText("\n");
         }
-    }
-
-    public void goBackToWoods () throws IOException {
-        root = FXMLLoader.load(getClass().getResource("Woods.fxml"));
-        stage.setScene(new Scene(root));
-        stage.show();
-    }
-
-    @FXML
-    public void goBackToWoodsButton(ActionEvent event) throws IOException {
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        goBackToWoods();
-    }
-
-
-    public void setGameController(GameController woodsQuizQuestionController) {
-        gameController = woodsQuizQuestionController;
     }
 }

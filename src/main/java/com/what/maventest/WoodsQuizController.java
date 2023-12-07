@@ -37,11 +37,6 @@ public class WoodsQuizController implements Initializable {
         Main.setScene("quiz");
     }
 
-    @FXML
-    public void goBackToWoodsButton(ActionEvent event) throws IOException {
-        gameController.goBackToWoods();
-    }
-
     public static class WoodsQuiz {
         public WoodsQuiz(TextArea textArea) {
         }
