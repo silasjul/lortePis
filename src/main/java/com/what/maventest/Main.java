@@ -33,7 +33,6 @@ public class Main extends Application {
     static public Player player = new Player(360, 370);
     static public StatusBar statusBar = new StatusBar();
     static public World world = new World();
-    static public GameController gameController = new GameController();
     static public Canvas canvas = new Canvas(width, height);
     static public Stage stage;
     static public Parent daRoot = new StackPane(canvas);
@@ -51,6 +50,7 @@ public class Main extends Application {
         rooms.put("woods", FXMLLoader.load(getClass().getResource("fxml/Woods.fxml")));
         rooms.put("safari", FXMLLoader.load(getClass().getResource("fxml/Safari.fxml")));
         rooms.put("wasteland", FXMLLoader.load(getClass().getResource("fxml/Wasteland.fxml")));
+        rooms.put("battle", FXMLLoader.load(getClass().getResource("fxml/Battle.fxml")));
 
 
         // Setup stage
@@ -74,6 +74,14 @@ public class Main extends Application {
         statusBar.display(gc);
         player.move();
         player.draw(gc);
+    }
+
+    static public void setScene(String roomName) {
+        tl.stop();
+        Scene scene = new Scene(rooms.get(roomName));
+        stage.setScene(scene);
+        stage.show();
+        player.interactPressed = false;
     }
 
     public static void main(String[] args) {

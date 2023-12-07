@@ -47,12 +47,9 @@ public class NPC {
             gc.fillText(name, x+35, y-10);
 
             if (Main.player.interactPressed) {
-                // Talk to npc
-                Main.tl.stop();
-                Scene scene = new Scene(Main.rooms.get(room));
-                Main.stage.setScene(scene);
-                Main.stage.show();
-                Main.player.interactPressed = false;
+                // Talking to npc
+                Main.setScene(room);
+                Main.player.resetKeys();
             }
         }
         if (Main.isTesting) collider.draw(gc);

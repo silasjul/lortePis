@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class Poacher extends Animal {
     float killTimerStart;
     float timeAlive;
-    final int killTime = 10;
+    final int killTime = 3;
     CollisionObject collider;
     Poacher(int width, int height, String image) {
         super(width, height, image);
@@ -23,9 +23,10 @@ public class Poacher extends Animal {
         if (walkVertical) collider.x += speed;
         else collider.y += speed;
 
-        // Start battle
         if (collider.isColliding() && Main.world.current == Main.world.spaces.get("savannah")) {
-            System.out.println("battle this bitch");
+            // Start battle
+            Main.setScene("battle");
+            Main.player.resetKeys();
         }
     }
 

@@ -1,8 +1,10 @@
 package com.what.maventest;
 
+import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 
 public class SpaceDesert extends Space {
+    Image deadElephant = new Image(getClass().getResource("Animal/deadElephant.png").toString(), 250, 250, true, true);
     SpaceDesert() {
         // BackgroundImg
         images.put("background",new Image(getClass().getResource("Map/Desert.png").toString(), Main.width, Main.height, true, true));
@@ -39,5 +41,11 @@ public class SpaceDesert extends Space {
         bounds.add(new CollisionObject(10,456,897,42));
         bounds.add(new CollisionObject(15,455,-8,42));
         bounds.add(new CollisionObject(812,20,44,-4));
+    }
+
+    @Override
+    public void draw(GraphicsContext gc) {
+        super.draw(gc);
+        gc.drawImage(deadElephant, 200, 200);
     }
 }

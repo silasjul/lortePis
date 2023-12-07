@@ -149,6 +149,10 @@ public class Player {
     }
 
     public void resetKeys() {
-
+        for (String key : controls.keySet()) {
+            controls.replace(key, false);
+            interactPressed = false;
+            isRunning = false;
+        }
     }
 }
