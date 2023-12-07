@@ -23,14 +23,12 @@ public class WoodsQuizQuestionController extends GameController implements Initi
     public Button opt1, opt2, opt3, opt4;
 
     int counter = 0;
-    static int correct = 0;
+    static public int correct = 0;
     static int wrong = 0;
 
 
     @FXML
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        correct = 0;
-        wrong = 0;
         loadWoodQuestions();
     }
 
@@ -203,18 +201,7 @@ public class WoodsQuizQuestionController extends GameController implements Initi
             opt2.setText("B");
             opt3.setText("C");
             opt4.setText("D");
-        } else if (counter == 11) {
-            textAreaQuiz.clear();
-            textAreaQuiz.appendText("4. " +
-                    "\n A: " +
-                    "\n B: " +
-                    "\n C: " +
-                    "\n D: ");
-            opt1.setText("A");
-            opt2.setText("B");
-            opt3.setText("C");
-            opt4.setText("D");
-        } else if (counter == 12) {
+        }  else if (counter == 11) {
             textAreaQuiz.clear();
             textAreaQuiz.appendText("5. What is biodiversity?" +
                     "\n " +
@@ -229,7 +216,7 @@ public class WoodsQuizQuestionController extends GameController implements Initi
             opt2.setText("B");
             opt3.setText("C");
             opt4.setText("D");
-        } else if (counter == 13) {
+        } else if (counter == 12) {
             textAreaQuiz.clear();
             textAreaQuiz.appendText("6. Why is biodiversity important?" +
                     "\n " +
@@ -244,7 +231,7 @@ public class WoodsQuizQuestionController extends GameController implements Initi
             opt2.setText("B");
             opt3.setText("C");
             opt4.setText("D");
-        } else if (counter == 14) {
+        } else if (counter == 13) {
             textAreaQuiz.clear();
             textAreaQuiz.appendText("7. How does genetic diversity contribute to the resilience of a population in the face of environmental changes?" +
                     "\n " +
@@ -259,7 +246,7 @@ public class WoodsQuizQuestionController extends GameController implements Initi
             opt2.setText("B");
             opt3.setText("C");
             opt4.setText("D");
-        } else if (counter == 15) {
+        } else if (counter == 14) {
             textAreaQuiz.clear();
             textAreaQuiz.appendText("8. How do you protect biodiversity?" +
                     "\n " +
@@ -281,12 +268,12 @@ public class WoodsQuizQuestionController extends GameController implements Initi
     public void opt1clicked(ActionEvent event) {
         checkAnswer(opt1.getText());
         if (checkAnswer(opt1.getText())) {
-            correct = correct + 1;
+            Main.correctQuizAnswers++;
         } else {
-            wrong = wrong + 1;
+            wrong++;
         }
 
-        if (counter == 15) {
+        if (counter == 14) {
             Main.setScene("quizResults");
         } else {
             counter++;
@@ -298,12 +285,12 @@ public class WoodsQuizQuestionController extends GameController implements Initi
     public void opt2clicked(ActionEvent event) {
         checkAnswer(opt2.getText());
         if (checkAnswer(opt2.getText())) {
-            correct = correct + 1;
+            Main.correctQuizAnswers++;
         } else {
-            wrong = wrong + 1;
+            wrong++;
         }
 
-        if (counter == 15) {
+        if (counter == 14) {
             Main.setScene("quizResults");
         } else {
             counter++;
@@ -315,12 +302,12 @@ public class WoodsQuizQuestionController extends GameController implements Initi
     public void opt3clicked(ActionEvent event) {
         checkAnswer(opt3.getText());
         if (checkAnswer(opt3.getText())) {
-            correct = correct + 1;
+            Main.correctQuizAnswers++;
         } else {
-            wrong = wrong + 1;
+            wrong++;
         }
 
-        if (counter == 15) {
+        if (counter == 14) {
             Main.setScene("quizResults");
         } else {
             counter++;
@@ -332,12 +319,12 @@ public class WoodsQuizQuestionController extends GameController implements Initi
     public void opt4clicked(ActionEvent event) {
         checkAnswer(opt4.getText());
         if (checkAnswer(opt4.getText())) {
-            correct = correct + 1;
+            Main.correctQuizAnswers++;
         } else {
-            wrong = wrong + 1;
+            wrong++;
         }
 
-        if (counter == 15) {
+        if (counter == 14) {
             Main.setScene("quizResults");
         } else {
             counter++;
@@ -346,7 +333,8 @@ public class WoodsQuizQuestionController extends GameController implements Initi
     }
 
     boolean checkAnswer(String answer) {
-        String[] correctAnswer = {"C", "C", "D", "A", "B", "B", "C", "C", "A", "A", "D", ".", "B", "D", ".", "C"};
+        String[] correctAnswer = {"C", "C", "D", "A", "B", "B", "C", "C", "A", "A", "D", "B", "D", "B", "C"};
+        System.out.println(Main.correctQuizAnswers);
         return correctAnswer[counter].equals(answer);
     }
 }

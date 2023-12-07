@@ -31,6 +31,7 @@ public class Main extends Application {
     // init game
     static public boolean isTesting = false; // show collision objects
     static public Player player = new Player(360, 370);
+    static public int correctQuizAnswers = 0;
     static public StatusBar statusBar = new StatusBar();
     static public World world = new World();
     static public Canvas canvas = new Canvas(width, height);

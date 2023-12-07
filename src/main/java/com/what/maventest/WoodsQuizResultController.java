@@ -19,10 +19,10 @@ public class WoodsQuizResultController {
 
     @FXML
     private void initialize() {
+        System.out.println("Correct: " + Main.correctQuizAnswers);
+        WoodsResults.appendText(Main.correctQuizAnswers + "/16");
 
-        WoodsResults.appendText(String.valueOf(WoodsQuizQuestionController.correct + "/16"));
-
-        int correct = WoodsQuizQuestionController.correct;
+        int correct = Main.correctQuizAnswers;
 
         if (correct < 2) {
             WoodsResults.appendText("\nOh no, you didn't do so well this time!");
