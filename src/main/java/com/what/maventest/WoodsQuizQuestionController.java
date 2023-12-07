@@ -346,7 +346,7 @@ public class WoodsQuizQuestionController extends GameController implements Initi
     }
 
     boolean checkAnswer(String answer) {
-        String[] correctAnswer = {"C", "C", "D", "A", "B", "B", "C", "C", "A", "A", "D", ".", "B", "D", ".", "C"};
+        String[] correctAnswer = {"C", "C", "D", "A", "B", "B", "C", "C", "A", "A", "D", ".", "B", "D", "B", "C"};
         return correctAnswer[counter].equals(answer);
     }
 }
