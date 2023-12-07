@@ -1,6 +1,7 @@
 package com.what.maventest;
 
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.Alert;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
@@ -29,6 +30,19 @@ public class StatusBar {
     }
 
     public void update() {
+
+        // Lose after 3 animals die
+        if (animalKillCount >= 3) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("YOU LOST!");
+            alert.setHeaderText("TOO MANY ANIMALS DIED");
+            alert.setContentText("Game over - you are a loser!");
+            alert.show();
+            Main.stage.close();
+            Main.tl.stop();
+            return;
+        }
+
         timeSeconds = (System.currentTimeMillis() - timeGameStart) / 1000F;
         if (isNewDay()) Main.world.spaces.get("savannah").spawnPoacher();
         daysPassed = (int)(timeSeconds / secondsInADay);
