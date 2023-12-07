@@ -22,9 +22,7 @@
                         <Image url="@image/pixil-frame-0.png" />
                     </image>
                 </ImageView>
-            <Button layoutX="26.0" layoutY="272.0" mnemonicParsing="false" onAction="#goToWasteland" prefHeight="25.0" prefWidth="94.0" text="Go Wasteland" />
-            <Button layoutX="26.0" layoutY="303.0" mnemonicParsing="false" onAction="#goToWoods" prefHeight="25.0" prefWidth="94.0" text="Go Woods" textAlignment="CENTER" />
-            <Button fx:id="talkToSabrinaButton" layoutX="26.0" layoutY="335.0" mnemonicParsing="false" onAction="#talkToSafariNPC" text="Talk to Sabrina" />
+            <Button fx:id="talkToSabrinaButton" layoutX="27.0" layoutY="311.0" mnemonicParsing="false" onAction="#talkToSafariNPC" text="Talk to Sabrina" />
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="406.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@image/pixil-frame-0_5.png" />
@@ -60,6 +58,7 @@
                   <Image url="@image/pixil-frame-0_11.png" />
                </image>
             </ImageView>
+              <Button layoutX="28.0" layoutY="277.0" mnemonicParsing="false" onAction="#goToOutside" prefHeight="25.0" prefWidth="94.0" text="Go back" />
             </children>
         </AnchorPane>
         <AnchorPane fx:id="anchorPane" layoutX="155.0" layoutY="236.0" prefHeight="150.0" prefWidth="399.0">
@@ -67,7 +66,6 @@
                 <TextArea fx:id="textAreaSafari" layoutX="27.0" prefHeight="132.0" prefWidth="396.0" text="The Safari.&#10;&#10;The bread and butter of any good park. &#10;Sabrina makes sure every animal has it good here. But it's difficult.&#10;&#10;Poachers keep showing up, trying to steal the elephant tusks.&#10;Make sure you don't let that happen, or Sabrina will be sad." />
             </children>
         </AnchorPane>
-        <Button layoutX="26.0" layoutY="241.0" mnemonicParsing="false" onAction="#goToOutside" prefHeight="25.0" prefWidth="94.0" text="Go Outside" />
         <Label layoutX="263.0" layoutY="14.0" text="Safari" textFill="WHITE" wrapText="true">
             <font>
                 <Font name="System Bold" size="26.0" />

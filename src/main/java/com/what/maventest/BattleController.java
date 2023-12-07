@@ -56,9 +56,6 @@ public class BattleController implements Initializable {
     }
     private GameController gameController;
 
-    public void setGameController(GameController gameController) {
-        this.gameController = gameController;
-    }
     @FXML
     public void handleAttackButton(ActionEvent event) {
         playerDamage = random.nextInt(20) + 2;
@@ -75,7 +72,6 @@ public class BattleController implements Initializable {
 
         updateUI();
         checkBattleResult();
-        updatePlayerHealthDisplay();
     }
 
     @FXML
@@ -88,7 +84,6 @@ public class BattleController implements Initializable {
 
         updateUI();
         checkBattleResult();
-        updatePlayerHealthDisplay();
     }
 
     @FXML
@@ -99,11 +94,7 @@ public class BattleController implements Initializable {
             textArea.clear();
             textArea.appendText("\nPlayer decided to flee from the battle like a little pussy");
             escapeSuccessful = true;
-            try {
-                gameController.goToSafariAfterBattle();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            battleOver();
         } else {
             int enemyDamage = new Random().nextInt(5) + 1;
             playerHP -= enemyDamage;
@@ -114,10 +105,6 @@ public class BattleController implements Initializable {
         }
     }
 
-    @FXML
-    public void handleItemsButton(ActionEvent event) {
-        textArea.appendText("\nItems button clicked");
-    }
 
     private void updateUI() {
         textArea.clear();
@@ -156,33 +143,6 @@ public class BattleController implements Initializable {
         if (playerWins && gameController != null) {
             battleOver();
         }
-    }
-
-
-    private void updatePlayerHealthDisplay() {
-        String healthMessage;
-
-        if (playerHP >= 75) {
-            healthMessage = "Your HP is currently " + playerHP;
-            setColoredText(healthMessage, Color.GREEN);
-        } else if (playerHP >= 35) {
-            healthMessage = "Your HP is currently " + playerHP;
-            setColoredText(healthMessage, Color.ORANGE);
-        } else {
-            healthMessage = "Your HP is currently " + playerHP;
-            setColoredText(healthMessage, Color.RED);
-        }
-    }
-
-    private void setColoredText(String text, Color color) {
-        Text coloredText = new Text(text);
-        coloredText.setFill(color);
-
-        textFlow.getChildren().clear();
-
-        textFlow.getChildren().add(coloredText);
-
-        textArea.appendText("\n" + text);
     }
 
     private void battleOver() {
