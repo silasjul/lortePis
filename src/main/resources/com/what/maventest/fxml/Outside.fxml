@@ -27,13 +27,13 @@
                         <Image url="@image/pixil-frame-0_2.png" />
                     </image>
                 </ImageView>
-                <Button fx:id="goToOutside" layoutX="42.0" layoutY="237.0" mnemonicParsing="false" onAction="#goToOutside" text="Go back" />
+                <Button fx:id="goToOutside" layoutX="42.0" layoutY="237.0" mnemonicParsing="false" onAction="#goToOutside" prefHeight="25.0" prefWidth="73.0" text="Go back" />
                 <Button fx:id="talkToJoeButton" layoutX="44.0" layoutY="283.0" mnemonicParsing="false" onAction="#talkToOutsideNPC" text="Talk to Joe" />
             </children>
         </AnchorPane>
         <AnchorPane fx:id="anchorPane" layoutX="155.0" layoutY="236.0" prefHeight="150.0" prefWidth="399.0">
             <children>
-                <TextArea fx:id="textAreaOutside" layoutX="35.0" layoutY="-10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="145.0" prefWidth="400.0" text="The office. &#10;Your main relaxation room.&#10;&#10;There is a faint smell of coffee and taxes in here.&#10;You really don't like taxes.&#10;&#10;Maybe Joe knows something... ?" />
+                <TextArea fx:id="textAreaOutside" layoutX="35.0" layoutY="-10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="145.0" prefWidth="400.0" text="The Outside.&#10;&#10;Your main hub leading to all other places in the park.&#10;&#10;There's a serene energy here. You like it." />
             </children>
         </AnchorPane>
         <Label layoutX="263.0" layoutY="14.0" text="Outside" textFill="WHITE" wrapText="true">
