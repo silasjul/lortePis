@@ -42,6 +42,7 @@ public class WoodsQuizQuestionController extends GameController implements Initi
     private void loadWoodQuestions() {
         if (counter == 0) {
             textAreaQuiz.appendText("First up, the Deforestation and Environmental degradation Quiz!!!" +
+                    "\n There's 8 Questions in each part." +
                     "\n 1. What is defined as deforestation in the text?" +
                     "\n A: An increase in forested areas." +
                     "\n B: A process of planting more trees. " +
