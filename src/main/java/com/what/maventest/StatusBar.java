@@ -33,7 +33,7 @@ public class StatusBar {
         if (isNewDay()) Main.world.spaces.get("savannah").spawnPoacher();
         daysPassed = (int)(timeSeconds / secondsInADay);
         daysToQuizStart = 5 - daysPassed;
-        if (daysToQuizStart == 0) System.out.println("QUIZZ TIMME BABBBYYY");
+        if (daysToQuizStart == 0) Main.setScene("quiz");
     }
 
     public boolean isNewDay() {
