@@ -1,0 +1,27 @@
+/* styles.css */
+
+.button-attack {
+    -fx-background-color: #4CAF50; /* Green */
+    -fx-text-fill: white;
+}
+
+.button-run {
+    -fx-background-color: #f44336; /* Red */
+    -fx-text-fill: white;
+}
+
+.button-defend {
+    -fx-background-color: #2196F3; /* Blue */
+    -fx-text-fill: white;
+}
+
+.button-items {
+    -fx-background-color: #FFC104; /* Yellow */
+    -fx-text-fill: white;
+}
+
+.text-area {
+    -fx-background-color: #f0f0f0; /* Light Grey */
+    -fx-text-fill: black;
+    -fx-font-family: "Arial";
+}
