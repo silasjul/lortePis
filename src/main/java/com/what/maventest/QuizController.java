@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class WoodsQuizController implements Initializable {
+public class QuizController implements Initializable {
 
     public Button continueButton;
     public Button goBackToWoods;
