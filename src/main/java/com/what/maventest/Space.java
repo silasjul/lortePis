@@ -42,6 +42,7 @@ public class Space {
             poacher.draw(gc);
             if (poacher.isDead) {
                 poachers.remove(poacher);
+                Main.statusBar.poachersKilled++;
                 break;
             }
 

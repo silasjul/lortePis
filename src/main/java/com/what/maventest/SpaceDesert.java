@@ -5,6 +5,10 @@ import javafx.scene.image.Image;
 
 public class SpaceDesert extends Space {
 
+    Image duckImg = new Image(getClass().getResource("Animal/Duck.png").toString(), 200, 200, true, true);
+    Image elephantImg = new Image(getClass().getResource("Animal/Elephant.png").toString(), 200, 200, true, true);
+    Image girafImg = new Image(getClass().getResource("Animal/Giraf.png").toString(), 200, 200, true, true);
+
     SpaceDesert() {
         // BackgroundImg
         images.put("background",new Image(getClass().getResource("Map/Desert.png").toString(), Main.width, Main.height, true, true));
@@ -46,6 +50,9 @@ public class SpaceDesert extends Space {
     @Override
     public void draw(GraphicsContext gc) {
         super.draw(gc);
-        //gc.drawImage(deadElephant, 200, 200);
+        gc.drawImage(duckImg, 200, 100);
+        gc.drawImage(duckImg, 600, 100);
+        gc.drawImage(girafImg, 300, 300);
+        gc.drawImage(elephantImg, 400, 50);
     }
 }

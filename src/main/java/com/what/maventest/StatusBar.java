@@ -17,6 +17,7 @@ public class StatusBar {
     int daysPassed = 0;
     Long timeGameStart;
     public Float timeSeconds;
+    public int poachersKilled = 0;
 
     StatusBar() {
         timeGameStart = System.currentTimeMillis();
@@ -26,7 +27,7 @@ public class StatusBar {
         update();
         gc.setFill(Color.BLACK);
         gc.setFont(Font.font("Gill Sans", FontWeight.BOLD, 30));
-        gc.fillText(String.format("Days to Quiz: %s  |  Animals killed: %d", daysToQuizStart, animalKillCount), 30,40);
+        gc.fillText(String.format("Days to Quiz: %s  |  Animals killed: %d  |  Poachers killed: %d", daysToQuizStart, animalKillCount, poachersKilled), 30,40);
     }
 
     public void update() {
