@@ -153,7 +153,7 @@ public class BattleController implements Initializable {
 
         if (playerWins && gameController != null) {
             try {
-                gameController.goToSafariAfterBattle();
+                gameController.goToOutside();
             } catch (IOException e) {
                 e.printStackTrace();
             }
