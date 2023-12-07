@@ -11,7 +11,7 @@ import java.util.Timer;
 
 public class StatusBar {
     int animalKillCount = 0;
-    final int secondsInADay = 5;
+    final int secondsInADay = 1;
     int daysToQuizStart = 5;
     int daysPassed = 0;
     Long timeGameStart;
@@ -33,7 +33,7 @@ public class StatusBar {
         if (isNewDay()) Main.world.spaces.get("savannah").spawnPoacher();
         daysPassed = (int)(timeSeconds / secondsInADay);
         daysToQuizStart = 5 - daysPassed;
-        if (daysToQuizStart == 0) Main.setScene("quiz");
+        if (daysToQuizStart == 0) Main.setScene("quizIntro");
     }
 
     public boolean isNewDay() {

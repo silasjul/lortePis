@@ -28,13 +28,13 @@ public class WoodsQuizController implements Initializable {
         updateWoodsQuizUI();
     }
 
-    public void setGameController(GameController gameController) {
-        this.gameController = gameController;
-    }
+//    public void setGameController(GameController gameController) {
+//        this.gameController = gameController;
+//    }
 
     @FXML
     public void continueQuizWoods(ActionEvent event) throws IOException {
-        gameController.goToWoodsQuiz();
+        Main.setScene("quiz");
     }
 
     @FXML

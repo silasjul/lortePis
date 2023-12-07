@@ -78,7 +78,7 @@ public class GameController {
         ActionEvent quizWoodsEvent;
         if (shouldStartWoodsQuiz()) {
             quizWoodsEvent = event;
-            StartWoodsQuiz(event);
+            //StartWoodsQuiz(event);
         } else {
             root = FXMLLoader.load(getClass().getResource("Woods.fxml"));
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -125,19 +125,19 @@ public class GameController {
             stage.show();
         }
 
-        private void StartWoodsQuiz (ActionEvent event) throws IOException {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("WoodsIntro.fxml"));
-            root = loader.load();
-            WoodsQuizController woodsQuizController = loader.getController();
-
-            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            scene = new Scene(root);
-            stage.setScene(scene);
-            woodsQuizController.setGameController(this);
-            stage.show();
-
-
-        }
+//        private void StartWoodsQuiz (ActionEvent event) throws IOException {
+//            FXMLLoader loader = new FXMLLoader(getClass().getResource("WoodsIntro.fxml"));
+//            root = loader.load();
+//            WoodsQuizController woodsQuizController = loader.getController();
+//
+//            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+//            scene = new Scene(root);
+//            stage.setScene(scene);
+//            woodsQuizController.setGameController(this);
+//            stage.show();
+//
+//
+//        }
         private boolean shouldStartWoodsQuiz () {
             double randomValue = Math.random();
             double quizProbability = 0.5;

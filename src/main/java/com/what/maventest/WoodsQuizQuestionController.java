@@ -231,19 +231,7 @@ public class WoodsQuizQuestionController extends GameController implements Initi
         }
 
         if (counter == 15) {
-            try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("WoodsResults.fxml"));
-                root = loader.load();
-                WoodsQuizResultController woodsQuizResultController = loader.getController();
-                woodsQuizResultController.setGameController(gameController);
-
-                stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                scene = new Scene(root);
-                stage.setScene(scene);
-                stage.show();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            Main.setScene("quizResults");
         } else {
             counter++;
             loadWoodQuestions();
@@ -260,19 +248,7 @@ public class WoodsQuizQuestionController extends GameController implements Initi
         }
 
         if (counter == 15) {
-            try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("WoodsResults.fxml"));
-                root = loader.load();
-                WoodsQuizResultController woodsQuizResultController = loader.getController();
-                woodsQuizResultController.setGameController(gameController);
-
-                stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                scene = new Scene(root);
-                stage.setScene(scene);
-                stage.show();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            Main.setScene("quizResults");
         } else {
             counter++;
             loadWoodQuestions();
@@ -289,19 +265,7 @@ public class WoodsQuizQuestionController extends GameController implements Initi
         }
 
         if (counter == 15) {
-            try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("WoodsResults.fxml"));
-                root = loader.load();
-                WoodsQuizResultController woodsQuizResultController = loader.getController();
-                woodsQuizResultController.setGameController(gameController);
-
-                stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                scene = new Scene(root);
-                stage.setScene(scene);
-                stage.show();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            Main.setScene("quizResults");
         } else {
             counter++;
             loadWoodQuestions();
@@ -318,19 +282,7 @@ public class WoodsQuizQuestionController extends GameController implements Initi
         }
 
         if (counter == 15) {
-            try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("WoodsResults.fxml"));
-                root = loader.load();
-                WoodsQuizResultController woodsQuizResultController = loader.getController();
-                woodsQuizResultController.setGameController(gameController);
-
-                stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                scene = new Scene(root);
-                stage.setScene(scene);
-                stage.show();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            Main.setScene("quizResults");
         } else {
             counter++;
             loadWoodQuestions();
