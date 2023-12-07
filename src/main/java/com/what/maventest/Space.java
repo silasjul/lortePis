@@ -40,6 +40,11 @@ public class Space {
         for (Poacher poacher : poachers) {
             poacher.move();
             poacher.draw(gc);
+            if (poacher.isDead) {
+                poachers.remove(poacher);
+                break;
+            }
+
             if (poacher.timeAlive > poacher.killTime) poacher.killAnimal(animals);
         }
 

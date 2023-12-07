@@ -26,6 +26,7 @@ public class Poacher extends Animal {
         if (collider.isColliding() && Main.world.current == Main.world.spaces.get("savannah")) {
             // Start battle
             Main.setScene("battle");
+            isDead = true;
             Main.player.resetKeys();
         }
     }

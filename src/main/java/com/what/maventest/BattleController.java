@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextArea;
+import javafx.scene.layout.Region;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
@@ -131,7 +132,8 @@ public class BattleController implements Initializable {
             handleGameOver(false);
         } else if (enemyHP <= 0) {
             textArea.appendText("\nEnemy has been defeated. You win!");
-            handleGameOver(true);
+            battleOver();
+            resetBattle();
         }
     }
 
@@ -152,11 +154,7 @@ public class BattleController implements Initializable {
         stage.close();
 
         if (playerWins && gameController != null) {
-            try {
-                gameController.goToSafariAfterBattle();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            battleOver();
         }
     }
 
@@ -185,5 +183,21 @@ public class BattleController implements Initializable {
         textFlow.getChildren().add(coloredText);
 
         textArea.appendText("\n" + text);
+    }
+
+    private void battleOver() {
+        Main.stage.getScene().setRoot(new Region());
+        Main.stage.setScene(Main.gameScene);
+        Main.stage.show();
+        Main.tl.play();
+    }
+
+    private void resetBattle() {
+        health = 100;
+        enemyhealth = 100;
+        playerHP = 100;
+        enemyHP = 100;
+        myHealthbar.setProgress(health/100);
+        enemyHealthbar.setProgress(health/100);
     }
 }
