@@ -8,6 +8,10 @@ public class SpaceOffice extends Space {
         // BackgroundImg
         images.put("background", new Image(getClass().getResource("Map/office.png").toString(), Main.width, Main.height, true, true));
 
+        // NPC
+        npcs.add(new NPC("Smart office man", 100, 120, 700, 300, "NPC/CoffeeMan.png", "#3C4AEA", false, "office"));
+
+
         // Exit
         exits.add(new CollisionExit(84,13,154,722, "start", 180, 100));
 

@@ -12,19 +12,19 @@
 <children>
       <ImageView fitHeight="581.0" fitWidth="845.0" layoutX="-245.0" layoutY="-201.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" smooth="false">
           <image>
-              <Image url="@BackgroundImg/A-Office-Design-scaled.jpg" />
+              <Image url="@image/A-Office-Design-scaled.jpg" />
           </image>
       </ImageView>
     <AnchorPane layoutX="-8.0" layoutY="-70.0" maxHeight="500.0" maxWidth="700.0" prefHeight="685.0" prefWidth="1223.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <children>
             <ImageView fitHeight="198.0" fitWidth="111.0" layoutX="48.0" layoutY="74.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
                 <image>
-                    <Image url="@BackgroundImg/pixil-frame-0.png" />
+                    <Image url="@image/pixil-frame-0.png" />
                 </image>
             </ImageView>
             <ImageView fitHeight="150.0" fitWidth="125.0" layoutX="300.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@BackgroundImg/pixil-frame-0_2.png" />
+                  <Image url="@image/pixil-frame-0_2.png" />
                </image>
             </ImageView>
               <Button layoutX="42.0" layoutY="237.0" mnemonicParsing="false" onAction="#goToOutside" text="Go Outside" />

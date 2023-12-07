@@ -47,6 +47,7 @@ public class Main extends Application {
 
         // Add Rooms
         rooms.put("office", FXMLLoader.load(getClass().getResource("fxml/Office.fxml")));
+        rooms.put("outside", FXMLLoader.load(getClass().getResource("fxml/Outside.fxml")));
         rooms.put("woods", FXMLLoader.load(getClass().getResource("fxml/Woods.fxml")));
         rooms.put("safari", FXMLLoader.load(getClass().getResource("fxml/Safari.fxml")));
         rooms.put("wasteland", FXMLLoader.load(getClass().getResource("fxml/Wasteland.fxml")));
