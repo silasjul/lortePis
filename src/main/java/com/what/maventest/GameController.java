@@ -15,6 +15,7 @@ import java.io.IOException;
 
 public class GameController {
 
+
     private Stage stage;
     private Scene scene;
     public Parent root;
@@ -27,8 +28,10 @@ public class GameController {
     private TextArea textAreaSafari;
     @FXML
     private TextArea textAreaWoods;
-
-    @FXML private TextArea textAreaWasteland;
+    @FXML
+    private TextArea textAreaOutside;
+    @FXML
+    private TextArea textAreaWasteland;
 
     private int talkCounter = 1;
 
@@ -373,27 +376,27 @@ public class GameController {
     private void updateOutsideText() {
         switch (talkCounter) {
             case 1:
-                textAreaOffice.clear();
-                textAreaOffice.appendText("Hey, my name is Joe. I'm your personal assistant here at our Park.");
+                textAreaOutside.clear();
+                textAreaOutside.appendText("Hey, my name is Joe. I'm your personal assistant here at our Park.");
                 break;
             case 2:
-                textAreaOffice.clear();
-                textAreaOffice.appendText("This is the main hub of our Park. The Outside.");
-                textAreaOffice.appendText("\nThis is connected to all the other parts of our Park.");
+                textAreaOutside.clear();
+                textAreaOutside.appendText("This is the main hub of our Park. The Outside.");
+                textAreaOutside.appendText("\nThis is connected to all the other parts of our Park.");
                 break;
             case 3:
-                textAreaOffice.clear();
-                textAreaOffice.appendText("Your job is to make sure that our Park is doing well.");
-                textAreaOffice.appendText("\nYou can do that by navigating the different rooms " +
+                textAreaOutside.clear();
+                textAreaOutside.appendText("Your job is to make sure that our Park is doing well.");
+                textAreaOutside.appendText("\nYou can do that by navigating the different rooms " +
                         "\nand talking to the workers.");
-                textAreaOffice.appendText("\nSabrina stands for making sure the Safari is doing well." +
+                textAreaOutside.appendText("\nSabrina stands for making sure the Safari is doing well." +
                         "\nChuck makes sure the Woods are doing well.");
                 break;
             case 4:
-                textAreaOffice.clear();
-                textAreaOffice.appendText("If you speak to them, you can learn more about different problems" +
+                textAreaOutside.clear();
+                textAreaOutside.appendText("If you speak to them, you can learn more about different problems" +
                         "\nwe face with poaching, deforestation and environmental degradation.");
-                textAreaOffice.appendText("\nThey will also quiz you on what you've learnt," +
+                textAreaOutside.appendText("\nThey will also quiz you on what you've learnt," +
                         "\nin order to make sure you have paid attention.");
                 break;
         }
