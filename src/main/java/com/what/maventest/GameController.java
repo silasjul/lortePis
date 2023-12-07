@@ -80,13 +80,16 @@ public class GameController {
             case 1:
                 textAreaWoods.clear();
                 textAreaWoods.appendText("Hi my name is Chuck." +
-                        "\nI will teach you about Deforestation and Environmental Degradation." +
-                        "\nDeforestation is defined as the process where forested areas disappear" +
+                        "\nI will teach you about Deforestation and Environmental Degradation.");
+                break;
+            case 2:
+                textAreaWoods.clear();
+                textAreaWoods.appendText("Deforestation is defined as the process where forested areas disappear" +
                         "\ndue to human activities such as logging, often to free up land for" +
                         "\nagriculture, mining, or other commercial purposes.");
 
                 break;
-            case 2:
+            case 3:
                 textAreaWoods.clear();
                 textAreaWoods.appendText("Deforestation is mentioned to have severe consequences for the" +
                         "\nenvironment, biodiversity and the people living in those areas." +
@@ -94,7 +97,7 @@ public class GameController {
                         "\nclimate since trees absorb significant amounts of " +
                         "\nCO2 from the atmosphere.");
                 break;
-            case 3:
+            case 4:
                 textAreaWoods.clear();
                 textAreaWoods.appendText("The European Parliament has approved a law that halts the sale of" +
                         "\ncommodities such as palm oil, cocoa, coffee, soy, cattle," +
@@ -102,7 +105,7 @@ public class GameController {
                         "\ndeforestation or forest degradation since the beginning of 2021." +
                         "\nThis also applies to products like shoes, furniture, and chocolate.");
                 break;
-            case 4:
+            case 5:
                 textAreaWoods.clear();
                 textAreaWoods.appendText("It's illegal to cut trees at a large scale without a permit." +
                         "\nThe reason for that is to protect forests globally, " +
@@ -111,7 +114,7 @@ public class GameController {
                         "\nIt aims to halt or minimize deforestation and forest degradation.");
                 break;
 
-            case 5:
+            case 6:
                 textAreaWoods.clear();
                 textAreaWoods.appendText("According to the UN, more than 420 million hectares of forest " +
                         "\ndisappeared between 1990 and 2020, equivalent to an area" +
@@ -119,7 +122,7 @@ public class GameController {
                         "\nAnnually, an area the size of Portugal is lost." +
                         "\nThis is why we pay so much attention to it not happening at our Park.");
                 break;
-            case 6:
+            case 7:
                 textAreaWoods.clear();
                 textAreaWoods.appendText("If you as a consumer wants to help, it is wise to buy products" +
                         "\nthat do not contribute to deforestation or forest degradation," +
@@ -128,13 +131,13 @@ public class GameController {
                         "\nbut they're all bad.");
                 break;
 
-            case 7 :
+            case 8 :
                 textAreaWoods.clear();
                 textAreaWoods.appendText("All of the different problems, deforestation, " +
                         "\npoaching and biodiversity loss included" +
                         "\nare some of the causes of environmental degradation.");
                 break ;
-            case 8 :
+            case 9 :
                 textAreaWoods.clear();
                 textAreaWoods.appendText("Environmental degradation is a huge problem globally, " +
                         "\nas it means the land that we live on slowly" +
@@ -143,13 +146,13 @@ public class GameController {
                         "\nwhile the plants that keep the animals" +
                         "\nalive all slowly begin struggling to grow.");
                 break ;
-            case 9 :
+            case 10 :
                 textAreaWoods.clear();
                 textAreaWoods.appendText("Soil erosion is a big part of it. " +
                         "\nErosion is caused by over-exploitation" +
                         "\nof the soil. It reduces the fertility of the soil. ");
                 break ;
-            case 10 :
+            case 11 :
                 textAreaWoods.clear();
                 textAreaWoods.appendText("Combined with a potential increase of salinity," +
                         "\nit ends up affecting the ability for plants to absorb water and nutrients." +
