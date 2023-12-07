@@ -8,60 +8,38 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="500.0" maxWidth="700.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.what.maventest.GameController">
+<AnchorPane maxHeight="400.0" maxWidth="600.0" minHeight="200.0" minWidth="200.0" prefHeight="380.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.what.maventest.GameController">
     <children>
-      <ImageView fitHeight="556.0" fitWidth="613.0" layoutX="-13.0" layoutY="-155.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@image/65016_DK_B_15_2009_2_5a.jpg" />
-         </image>
-      </ImageView>
-      <AnchorPane layoutX="-8.0" layoutY="-70.0">
-         <children>
-            <Label layoutX="259.0" layoutY="86.0" text="Outside" textFill="WHITE" wrapText="true">
-               <font>
-                  <Font name="System Bold" size="26.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="154.0" fitWidth="105.0" layoutX="47.0" layoutY="147.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@image/pixil-frame-0.png" />
-               </image>
-            </ImageView>
-              <Button layoutX="47.0" layoutY="411.0" mnemonicParsing="false" onAction="#goToSafari" prefHeight="25.0" prefWidth="72.0" text="Go Safari" />
-              <Button layoutX="47.0" layoutY="380.0" mnemonicParsing="false" onAction="#goToWoods" text="Go Woods" />
-              <Button layoutX="47.0" layoutY="348.0" mnemonicParsing="false" onAction="#goToDesert" prefHeight="25.0" prefWidth="72.0" text="Go Desert" />
-              <Button layoutX="47.0" layoutY="317.0" mnemonicParsing="false" onAction="#goToOffice" prefHeight="25.0" prefWidth="72.0" text="Go Office" />
-            <ImageView fitHeight="48.0" fitWidth="37.0" layoutX="270.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@image/pixil-frame-0_4.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="54.0" fitWidth="62.0" layoutX="308.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@image/pixil-frame-0_4.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="54.0" fitWidth="62.0" layoutX="225.0" layoutY="235.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@image/pixil-frame-0_4.png" />
-               </image>
-            </ImageView>
-         </children>
-      </AnchorPane>
-        <AnchorPane fx:id="anchorPane" layoutX="155.0" layoutY="236.0" prefHeight="150.0" prefWidth="399.0">
+        <ImageView fitHeight="581.0" fitWidth="845.0" layoutX="-245.0" layoutY="-201.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" smooth="false">
+            <image>
+                <Image url="@image/65016_DK_B_15_2009_2_5a.jpg" />
+            </image>
+        </ImageView>
+        <AnchorPane layoutX="-8.0" layoutY="-70.0" maxHeight="500.0" maxWidth="700.0" prefHeight="685.0" prefWidth="1223.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
-                <TextArea fx:id="textArea" layoutX="34.0" layoutY="9.0" prefHeight="145.0" prefWidth="400.0" text="The Outside.&#10;&#10;Your main hub leading to all other places in the park.&#10;&#10;There's a serene energy here. You like it." />
+                <ImageView fitHeight="198.0" fitWidth="111.0" layoutX="48.0" layoutY="74.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@image/pixil-frame-0.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="150.0" fitWidth="125.0" layoutX="300.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@image/pixil-frame-0_2.png" />
+                    </image>
+                </ImageView>
+                <Button layoutX="42.0" layoutY="237.0" mnemonicParsing="false" onAction="#goToOutside" text="Go back" />
+                <Button fx:id="talkToJoeButton" layoutX="44.0" layoutY="283.0" mnemonicParsing="false" onAction="#talkToOfficeNPC" text="Talk to Joe" />
             </children>
         </AnchorPane>
-      <ImageView fitHeight="54.0" fitWidth="62.0" layoutX="383.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@image/pixil-frame-0_4.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="54.0" fitWidth="62.0" layoutX="350.0" layoutY="176.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@image/pixil-frame-0_4.png" />
-         </image>
-      </ImageView>
+        <AnchorPane fx:id="anchorPane" layoutX="155.0" layoutY="236.0" prefHeight="150.0" prefWidth="399.0">
+            <children>
+                <TextArea fx:id="textAreaOffice" layoutX="35.0" layoutY="-10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="145.0" prefWidth="400.0" text="The office. &#10;Your main relaxation room.&#10;&#10;There is a faint smell of coffee and taxes in here.&#10;You really don't like taxes.&#10;&#10;Maybe Joe knows something... ?" />
+            </children>
+        </AnchorPane>
+        <Label layoutX="263.0" layoutY="14.0" text="Office" textFill="WHITE" wrapText="true">
+            <font>
+                <Font name="System Bold" size="26.0" />
+            </font>
+        </Label>
     </children>
 </AnchorPane>

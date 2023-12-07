@@ -27,14 +27,13 @@
                         <Image url="@image/pixil-frame-0.png" />
                     </image>
                 </ImageView>
-            <Button layoutX="36.0" layoutY="277.0" mnemonicParsing="false" onAction="#goToSafari" prefHeight="25.0" prefWidth="86.0" text="Go Safari" />
-              <Button layoutX="35.0" layoutY="245.0" mnemonicParsing="false" onAction="#goToOutside" prefHeight="25.0" prefWidth="88.0" text="Go Outside" />
+              <Button layoutX="35.0" layoutY="245.0" mnemonicParsing="false" onAction="#goToOutside" prefHeight="25.0" prefWidth="88.0" text="Go back" />
               <Label layoutX="249.0" layoutY="14.0" text="Woods" textFill="WHITE" wrapText="true">
                   <font>
                       <Font name="System Bold" size="26.0" />
                   </font>
               </Label>
-            <Button fx:id="talkToChuckButton" layoutX="35.0" layoutY="310.0" mnemonicParsing="false" onAction="#talkToWoodsNPC" text="Talk to Chuck" />
+            <Button fx:id="talkToChuckButton" layoutX="35.0" layoutY="282.0" mnemonicParsing="false" onAction="#talkToWoodsNPC" text="Talk to Chuck" />
             </children>
         </AnchorPane>
         <AnchorPane fx:id="anchorPane" layoutX="155.0" layoutY="236.0" prefHeight="150.0" prefWidth="399.0">

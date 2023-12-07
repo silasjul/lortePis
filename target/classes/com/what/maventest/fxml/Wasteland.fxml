@@ -27,8 +27,7 @@
                         <Image url="@image/pixil-frame-0.png" />
                     </image>
                 </ImageView>
-              <Button layoutX="43.0" layoutY="349.0" mnemonicParsing="false" onAction="#goToSafari" prefHeight="25.0" prefWidth="72.0" text="Go Safari" />
-              <Button layoutX="43.0" layoutY="315.0" mnemonicParsing="false" onAction="#goToOffice" prefHeight="25.0" prefWidth="72.0" text="Go Office" />
+              <Button layoutX="43.0" layoutY="349.0" mnemonicParsing="false" onAction="#goToOutside" prefHeight="25.0" prefWidth="72.0" text="Go back" />
             </children>
         </AnchorPane>
         <AnchorPane fx:id="anchorPane" layoutX="155.0" layoutY="236.0" prefHeight="150.0" prefWidth="399.0">
