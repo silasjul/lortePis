@@ -206,10 +206,10 @@ public class WoodsQuizQuestionController extends GameController implements Initi
         } else if (counter == 14) {
             textAreaQuiz.clear();
             textAreaQuiz.appendText("7. How does genetic diversity contribute to the resilience of a population in the face of environmental changes?" +
-                    "\n A: " +
-                    "\n B: " +
-                    "\n C: " +
-                    "\n D: ");
+                    "\n A: Genetic diversity increases the likelihood of some individuals having traits that enhance survival in changing conditions." + // korrekt
+                    "\n B: Genetic diversity allows for a broader range of adaptations, improving the population's ability to cope with environmental challenges." +
+                    "\n C: Genetic diversity hinders adaptability, making populations more vulnerable to environmental changes." +
+                    "\n D: Genetic diversity has no impact on the resilience of a population in the face of environmental changes.");
             opt1.setText("A");
             opt2.setText("B");
             opt3.setText("C");
