@@ -163,9 +163,9 @@ public class QuestionController extends GameController implements Initializable 
             opt2.setText("B");
             opt3.setText("C");
             opt4.setText("D");
-        } else if (counter == 12) {
+        } else if (counter == 11) {
             textAreaQuiz.clear();
-            textAreaQuiz.appendText("5. What is biodiversity?" +
+            textAreaQuiz.appendText("4. What is biodiversity?" +
                     "\n " +
                     "\n A: It is the absence of animals, plants and microorganisms." +
                     "\n B: The different forms of life found in one place, such as a variety of animals, plants, fungi and microorganisms." + // korrekt
@@ -175,9 +175,9 @@ public class QuestionController extends GameController implements Initializable 
             opt2.setText("B");
             opt3.setText("C");
             opt4.setText("D");
-        } else if (counter == 13) {
+        } else if (counter == 12) {
             textAreaQuiz.clear();
-            textAreaQuiz.appendText("6. Why is biodiversity important?" +
+            textAreaQuiz.appendText("5. Why is biodiversity important?" +
                     "\n " +
                     "\n A: Biodiversity is not important; it only serves aesthetic purposes in nature." +
                     "\n B: Biodiversity is crucial because it ensures that all species live in perfect harmony without any competition." +
@@ -187,9 +187,9 @@ public class QuestionController extends GameController implements Initializable 
             opt2.setText("B");
             opt3.setText("C");
             opt4.setText("D");
-        } else if (counter == 14) {
+        } else if (counter == 13) {
             textAreaQuiz.clear();
-            textAreaQuiz.appendText("7. How does genetic diversity contribute to the resilience of a population in the face of environmental changes?" +
+            textAreaQuiz.appendText("6. How does genetic diversity contribute to the resilience of a population in the face of environmental changes?" +
                     "\n " +
                     "\n A: Genetic diversity increases the likelihood of some individuals having traits that enhance survival in changing conditions." + // korrekt
                     "\n B: Genetic diversity allows for a broader range of adaptations, improving the population's ability to cope with environmental challenges." +
@@ -199,9 +199,9 @@ public class QuestionController extends GameController implements Initializable 
             opt2.setText("B");
             opt3.setText("C");
             opt4.setText("D");
-        } else if (counter == 15) {
+        } else if (counter == 14) {
             textAreaQuiz.clear();
-            textAreaQuiz.appendText("8. How do you protect biodiversity?" +
+            textAreaQuiz.appendText("7. How do you protect biodiversity?" +
                     "\n " +
                     "\n A: To protect biodiversity, it's best to domesticate wild animals and keep them as pets to ensure their safety." +
                     "\n B: Building more highways and infrastructure in natural habitats is an effective way to safeguard biodiversity by providing animals with new living spaces." +
