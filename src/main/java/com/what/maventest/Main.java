@@ -35,22 +35,30 @@ public class Main extends Application {
     static public World world = new World();
     static public GameController gameController = new GameController();
     static public Canvas canvas = new Canvas(width, height);
-    static public Stage mainStage;
-    static public Scene gameScene = new Scene(new StackPane(canvas), width, height);
-    static public Parent root;
+    static public Stage stage;
+    static public Parent daRoot = new StackPane(canvas);
+    static public Scene gameScene = new Scene(daRoot, width, height);
+    static public HashMap<String, Parent> rooms = new HashMap<>();
+    static public Timeline tl = new Timeline();
 
 
     @Override
     public void start(Stage stage) throws IOException {
-        
+
+        // Add Rooms
+        rooms.put("office", FXMLLoader.load(getClass().getResource("fxml/Office.fxml")));
+        rooms.put("woods", FXMLLoader.load(getClass().getResource("fxml/Woods.fxml")));
+        rooms.put("safari", FXMLLoader.load(getClass().getResource("fxml/Safari.fxml")));
+        rooms.put("wasteland", FXMLLoader.load(getClass().getResource("fxml/Wasteland.fxml")));
+
+
         // Setup stage
         GraphicsContext gc = canvas.getGraphicsContext2D();
-        Timeline tl = new Timeline(new KeyFrame(Duration.millis(5), e -> run(gc)));
+        tl.getKeyFrames().add(new KeyFrame(Duration.millis(5), e -> run(gc)));
         tl.setCycleCount(Timeline.INDEFINITE);
-        mainStage = stage;
-        //root = FXMLLoader.load(getClass().getResource("Office.fxml"));
-        mainStage.setScene(gameScene);
-        mainStage.show();
+        this.stage = stage;
+        stage.setScene(gameScene);
+        stage.show();
         tl.play();
 
         

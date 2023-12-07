@@ -19,10 +19,10 @@ public class NPC {
     int width, height, x, y;
     boolean flipImage;
     Image image;
-    String name;
+    String name, room;
     CollisionObject collider;
     String color;
-    NPC(String name, int width, int height, int x, int y, String image, String textNameColor, boolean flipImage) {
+    NPC(String name, int width, int height, int x, int y, String image, String textNameColor, boolean flipImage, String roomName) {
         this.name = name;
         this.width = width;
         this.height = height;
@@ -32,6 +32,7 @@ public class NPC {
         collider = new CollisionObject(width, height, x, y);
         this.color = textNameColor;
         this.flipImage = flipImage;
+        this.room = roomName;
     }
 
     public void draw(GraphicsContext gc) {
@@ -47,12 +48,11 @@ public class NPC {
 
             if (Main.player.interactPressed) {
                 // Talk to npc
-
-                Stage stage = (Stage) Main.mainStage.getScene().getWindow();
-                Scene scene = new Scene(Main.root);
-                stage.setScene(scene);
-                stage.show();
-                System.out.println("Talking with " + name);
+                Main.tl.stop();
+                Scene scene = new Scene(Main.rooms.get(room));
+                Main.stage.setScene(scene);
+                Main.stage.show();
+                Main.player.interactPressed = false;
             }
         }
         if (Main.isTesting) collider.draw(gc);

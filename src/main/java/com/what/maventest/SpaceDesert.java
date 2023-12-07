@@ -12,7 +12,7 @@ public class SpaceDesert extends Space {
         exits.add(new CollisionExit(290,17,358,892, "start", 430, -80));
 
         // NPC
-        npcs.add(new NPC("Amy Schumer", 100, 120, 520, 200, "NPC/SafariWoman.png", "#EA6B41", false));
+        npcs.add(new NPC("Amy Schumer", 100, 120, 520, 200, "NPC/SafariWoman.png", "#EA6B41", false, "safari"));
 
         // Bounds
         bounds.add(new CollisionObject(53,83,621,198));

@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
+import javafx.scene.layout.Region;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -16,7 +17,7 @@ public class GameController {
 
     private Stage stage;
     private Scene scene;
-    private Parent root;
+    public Parent root;
     public Button talkToJoeButton;
     public Button talkToSabrinaButton;
     public Button talkToChuckButton;
@@ -42,11 +43,10 @@ public class GameController {
     }
 
     public void goToOutside(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("Outside.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        Main.stage.getScene().setRoot(new Region());
+        Main.stage.setScene(Main.gameScene);
+        Main.stage.show();
+        Main.tl.play();
     }
 
     public void goToDesert(ActionEvent event) throws IOException {

@@ -14,7 +14,7 @@ public class SpaceForest extends Space {
         exits.add(new CollisionExit(18,66,-8,416, "start", 800, 400));
 
         // NPC
-        npcs.add(new NPC("Lumberjack", 100, 120, 650, 280, "NPC/Lumberjack.png", "#EB1423", false));
+        npcs.add(new NPC("Lumberjack", 100, 120, 650, 280, "NPC/Lumberjack.png", "#EB1423", false, "woods"));
 
         // Bounds
         bounds.add(new CollisionObject(50,278,2,624));

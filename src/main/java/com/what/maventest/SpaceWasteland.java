@@ -13,7 +13,7 @@ public class SpaceWasteland extends Space{
         exits.add(new CollisionExit(169,25,366,-15, "start", 350, 750));
 
         // NPC
-        npcs.add(new NPC("Not James Brown", 100, 120, 550, 500, "NPC/CoffeeMan.png", "#00D656", false));
+        npcs.add(new NPC("Not James Brown", 100, 120, 550, 500, "NPC/CoffeeMan.png", "#00D656", false, "wasteland"));
 
         // Bounds
         bounds.add(new CollisionObject(62,170,-10,665));

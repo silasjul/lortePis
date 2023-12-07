@@ -147,4 +147,8 @@ public class Player {
         else if (e.getCode() == KeyCode.SPACE) {interactPressed = false; return;}
         controls.replace(e.getText(), false);
     }
+
+    public void resetKeys() {
+
+    }
 }
