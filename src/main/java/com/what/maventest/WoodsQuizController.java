@@ -39,10 +39,10 @@ public class WoodsQuizController implements Initializable {
     }
 
     private void updateWoodsQuizUI() {
-        textArea.appendText("Hello and welcome to the Woods Quiz!\n");
-        textArea.appendText("In this Quiz you're going to be asked some questions about deforestation" +
-                "\n and environmental degradation.");
-        textArea.appendText("\nIf you think you don't know enough about the subject yet, " +
-                "\nyou can go back and talk to me. I'll gladly tell you more or remind you.");
+        textArea.appendText("Hello and welcome to the Park Ranger Quiz!\n");
+        textArea.appendText("In this Quiz you're going to be asked some questions about deforestation," +
+                "\nenvironmental degradation, poaching and biodiversity loss");
+        textArea.appendText("\nIf you think you don't know enough about the subject yet, sucks to suck." +
+                "\nYou had the time to learn before. Did you maybe waste too much time hunting Poachers?");
     }
 }
