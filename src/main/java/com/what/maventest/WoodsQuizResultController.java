@@ -21,24 +21,27 @@ public class WoodsQuizResultController {
     @FXML
     private void initialize() {
 
-        WoodsResults.appendText(String.valueOf(WoodsQuizQuestionController.correct + "/8"));
+        WoodsResults.appendText(String.valueOf(WoodsQuizQuestionController.correct + "/16"));
 
         int correct = WoodsQuizQuestionController.correct;
 
         if (correct < 2) {
             WoodsResults.appendText("\nOh no, you didn't do so well this time!");
-            WoodsResults.appendText("\nYou got time to improve! Just ask your collegues.");
-        } else if (correct >= 2 && correct <= 3) {
+            WoodsResults.appendText("\nYou got time to improve! Just ask your colleagues.");
+        } else if (correct >= 3 && correct <= 5) {
             WoodsResults.appendText("\n Damn! you didn't do so well.. Maybe next time !!");
             WoodsResults.appendText("\n");
-        } else if (correct >= 4 && correct <= 5) {
+        } else if (correct >= 6 && correct <= 8) {
             WoodsResults.appendText("\nYou did fine.. I know you can do better, ");
             WoodsResults.appendText("\nI know you will get everything correct next time!");
-        } else if (correct == 6 ||   correct == 7) {
-            WoodsResults.appendText("\nYou almost got every question correct");
-            WoodsResults.appendText("\nNext time you've got this!.");
-        } else if (correct == 8) {
-            WoodsResults.appendText("\nOh yes, Perfect ! You nailed this quiz!!! you deserve an icecream!");
+        } else if (correct >= 9 && correct <= 12) {
+            WoodsResults.appendText("\nYou did pretty well this time!");
+            WoodsResults.appendText("\nNext time you're going to do even better!");
+        } else if (correct == 13 ||   correct == 14) {
+            WoodsResults.appendText("\nYou almost got every question correct!");
+            WoodsResults.appendText("\nNext time you've got this in the bag!");
+        } else if (correct == 15) {
+            WoodsResults.appendText("\nOh yes, Perfect ! You nailed this quiz!!! you deserve an ice cream!");
             WoodsResults.appendText("\n");
         }
     }
