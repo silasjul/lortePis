@@ -15,10 +15,6 @@ import java.io.IOException;
 
 public class GameController {
 
-
-    private Stage stage;
-    private Scene scene;
-    public Parent root;
     public Button talkToJoeButton;
     public Button talkToSabrinaButton;
     public Button talkToChuckButton;
@@ -134,25 +130,32 @@ public class GameController {
 
             case 7 :
                 textAreaWoods.clear();
-                textAreaWoods.appendText("All of the different problems, deforestation, poaching and biodiversity loss included" +
-                        "\nare some of the causes of environmental degradation." +
-                        "\nEnvironmental degradation is a huge problem globally, as it means the land that we live on slowly" +
-                        "\nbecomes uninhabitable, for humans, animals and plants alike." +
-                        "\nSoil becomes unusable for humans to grow crops, while the plants that keep the animals" +
-                        "\nalive all slowly begin struggling to grow.");
+                textAreaWoods.appendText("All of the different problems, deforestation, " +
+                        "\npoaching and biodiversity loss included" +
+                        "\nare some of the causes of environmental degradation.");
                 break ;
-
             case 8 :
                 textAreaWoods.clear();
-                textAreaWoods.appendText("Soil erosion is a big part of it. Erosion is caused by over-exploitation" +
-                        "\nof the soil. It reduces the fertility of the soil. Combined with a potential increase of salinity" +
-                        "\nit can end up affecting the ability for plants to absorb water and nutrients." +
-                        "\nAll this leads to a circle in which plants can't grow, which means the soil doesn't get nutrients" +
-                        "\nfrom all the dead plant matter. Which in turn makes it even worse." );
+                textAreaWoods.appendText("Environmental degradation is a huge problem globally, " +
+                        "\nas it means the land that we live on slowly" +
+                        "\nbecomes uninhabitable, for humans, animals and plants alike." +
+                        "\nSoil becomes unusable for humans to grow crops, " +
+                        "\nwhile the plants that keep the animals" +
+                        "\nalive all slowly begin struggling to grow.");
                 break ;
             case 9 :
                 textAreaWoods.clear();
-                textAreaWoods.appendText("");
+                textAreaWoods.appendText("Soil erosion is a big part of it. " +
+                        "\nErosion is caused by over-exploitation" +
+                        "\nof the soil. It reduces the fertility of the soil. ");
+                break ;
+            case 10 :
+                textAreaWoods.clear();
+                textAreaWoods.appendText("Combined with a potential increase of salinity," +
+                        "\nit ends up affecting the ability for plants to absorb water and nutrients." +
+                        "\nAll this leads to a circle in which plants can't grow," +
+                        "\nwhich means the soil doesn't get nutrients" +
+                        "\nfrom all the dead plant matter. Which in turn makes it even worse.");
                 break ;
 
         }

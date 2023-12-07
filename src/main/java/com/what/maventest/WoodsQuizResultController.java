@@ -17,7 +17,6 @@ public class WoodsQuizResultController {
     @FXML
     public TextArea WoodsResults;
 
-    public Button goBackToWoods;
     @FXML
     private void initialize() {
 

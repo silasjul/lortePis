@@ -19,17 +19,12 @@ public class WoodsQuizQuestionController extends GameController implements Initi
 
     @FXML
     private TextArea textAreaQuiz;
-
     @FXML
     public Button opt1, opt2, opt3, opt4;
 
     int counter = 0;
     static int correct = 0;
     static int wrong = 0;
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
-    private GameController gameController;
 
 
     @FXML
