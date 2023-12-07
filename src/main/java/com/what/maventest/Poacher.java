@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class Poacher extends Animal {
     float killTimerStart;
     float timeAlive;
-    final int killTime = 20;
+    final int killTime = 15;
     CollisionObject collider;
     Poacher(int width, int height, String image) {
         super(width, height, image);
