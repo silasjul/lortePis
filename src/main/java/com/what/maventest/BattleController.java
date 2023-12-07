@@ -99,7 +99,7 @@ public class BattleController implements Initializable {
             textArea.appendText("\nPlayer decided to flee from the battle like a little pussy");
             escapeSuccessful = true;
             try {
-                gameController.goToSafariAfterBattle();
+                gameController.goToOutside();
             } catch (IOException e) {
                 e.printStackTrace();
             }

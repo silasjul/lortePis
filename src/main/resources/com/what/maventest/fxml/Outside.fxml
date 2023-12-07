@@ -33,10 +33,10 @@
         </AnchorPane>
         <AnchorPane fx:id="anchorPane" layoutX="155.0" layoutY="236.0" prefHeight="150.0" prefWidth="399.0">
             <children>
-                <TextArea fx:id="textAreaOffice" layoutX="35.0" layoutY="-10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="145.0" prefWidth="400.0" text="The office. &#10;Your main relaxation room.&#10;&#10;There is a faint smell of coffee and taxes in here.&#10;You really don't like taxes.&#10;&#10;Maybe Joe knows something... ?" />
+                <TextArea fx:id="textAreaOutside" layoutX="35.0" layoutY="-10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="145.0" prefWidth="400.0" text="The office. &#10;Your main relaxation room.&#10;&#10;There is a faint smell of coffee and taxes in here.&#10;You really don't like taxes.&#10;&#10;Maybe Joe knows something... ?" />
             </children>
         </AnchorPane>
-        <Label layoutX="263.0" layoutY="14.0" text="Office" textFill="WHITE" wrapText="true">
+        <Label layoutX="263.0" layoutY="14.0" text="Outside" textFill="WHITE" wrapText="true">
             <font>
                 <Font name="System Bold" size="26.0" />
             </font>
