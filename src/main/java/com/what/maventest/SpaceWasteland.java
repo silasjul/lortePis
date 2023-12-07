@@ -1,8 +1,11 @@
 package com.what.maventest;
 
+import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 
 public class SpaceWasteland extends Space{
+
+    Image deadElephant = new Image(getClass().getResource("Animal/deadElephant.png").toString(), 250, 250, true, true);
 
     SpaceWasteland() {
         // BackgroundImg
@@ -13,7 +16,7 @@ public class SpaceWasteland extends Space{
         exits.add(new CollisionExit(169,25,366,-15, "start", 350, 750));
 
         // NPC
-        npcs.add(new NPC("Not James Brown", 100, 120, 550, 500, "NPC/CoffeeMan.png", "#00D656", false, "wasteland"));
+        npcs.add(new NPC("Sabrina", 100, 120, 550, 500, "NPC/SafariWoman.png", "#00D656", false, "wasteland"));
 
         // Bounds
         bounds.add(new CollisionObject(62,170,-10,665));
@@ -56,5 +59,13 @@ public class SpaceWasteland extends Space{
         bounds.add(new CollisionObject(70,70,769,792));
         bounds.add(new CollisionObject(68,120,831,680));
         bounds.add(new CollisionObject(16,271,-14,599));
+    }
+
+    @Override
+    public void draw(GraphicsContext gc) {
+        super.draw(gc);
+        gc.drawImage(deadElephant, 200, 250);
+        gc.drawImage(deadElephant, 400, 250);
+        gc.drawImage(deadElephant, 300, 600);
     }
 }

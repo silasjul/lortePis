@@ -4,7 +4,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 
 public class SpaceDesert extends Space {
-    Image deadElephant = new Image(getClass().getResource("Animal/deadElephant.png").toString(), 250, 250, true, true);
+
     SpaceDesert() {
         // BackgroundImg
         images.put("background",new Image(getClass().getResource("Map/Desert.png").toString(), Main.width, Main.height, true, true));
@@ -14,7 +14,7 @@ public class SpaceDesert extends Space {
         exits.add(new CollisionExit(290,17,358,892, "start", 430, -80));
 
         // NPC
-        npcs.add(new NPC("Amy Schumer", 100, 120, 520, 200, "NPC/SafariWoman.png", "#EA6B41", false, "safari"));
+        npcs.add(new NPC("Sabrina", 100, 120, 520, 200, "NPC/SafariWoman.png", "#EA6B41", false, "safari"));
 
         // Bounds
         bounds.add(new CollisionObject(53,83,621,198));
@@ -46,6 +46,6 @@ public class SpaceDesert extends Space {
     @Override
     public void draw(GraphicsContext gc) {
         super.draw(gc);
-        gc.drawImage(deadElephant, 200, 200);
+        //gc.drawImage(deadElephant, 200, 200);
     }
 }

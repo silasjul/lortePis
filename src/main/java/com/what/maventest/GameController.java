@@ -40,6 +40,7 @@ public class GameController {
         Main.stage.setScene(Main.gameScene);
         Main.stage.show();
         Main.tl.play();
+        talkCounter = 2;
     }
 
 
