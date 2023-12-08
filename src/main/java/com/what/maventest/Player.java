@@ -20,10 +20,6 @@ public class Player {
     public boolean isRunning;
     public boolean interactPressed;
     public ArrayList<CollisionObject> colliding = new ArrayList<>();
-
-    // inventory
-    public ArrayList<Item> inventory = new ArrayList<>();
-
     HashMap<String, Image> playerImg = new HashMap<>();
 
     Player(int startPosX, int startPosY) {
