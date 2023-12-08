@@ -12,7 +12,7 @@ import java.util.Timer;
 
 public class StatusBar {
     int animalKillCount = 0;
-    final int secondsInADay = 1;
+    final int secondsInADay = 45;
     int daysToQuizStart = 5;
     int daysPassed = 0;
     Long timeGameStart;
