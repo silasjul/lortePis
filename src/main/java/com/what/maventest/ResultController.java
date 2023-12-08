@@ -1,26 +1,17 @@
 package com.what.maventest;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
-import javafx.stage.Stage;
-
-import java.io.IOException;
 
 
-public class WoodsQuizResultController {
+public class ResultController {
     @FXML
     public TextArea WoodsResults;
 
     @FXML
     private void initialize() {
         System.out.println("Correct: " + Main.correctQuizAnswers);
-        WoodsResults.appendText(Main.correctQuizAnswers + "/16");
+        WoodsResults.appendText("Correct answers " + Main.correctQuizAnswers + "/16");
 
         int correct = Main.correctQuizAnswers;
 
