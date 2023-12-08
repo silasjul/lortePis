@@ -52,8 +52,8 @@ public class Main extends Application {
         rooms.put("safari", FXMLLoader.load(getClass().getResource("fxml/Safari.fxml")));
         rooms.put("wasteland", FXMLLoader.load(getClass().getResource("fxml/Wasteland.fxml")));
         rooms.put("battle", FXMLLoader.load(getClass().getResource("fxml/Battle.fxml")));
-        rooms.put("quizIntro", FXMLLoader.load(getClass().getResource("fxml/WoodsIntro.fxml")));
-        rooms.put("quiz", FXMLLoader.load(getClass().getResource("fxml/QuizWoodsQuestions.fxml")));
+        rooms.put("quizIntro", FXMLLoader.load(getClass().getResource("fxml/QuizIntro.fxml")));
+        rooms.put("quiz", FXMLLoader.load(getClass().getResource("fxml/QuizQuestions.fxml")));
 
 
         // Setup stage

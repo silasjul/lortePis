@@ -337,7 +337,7 @@ public class QuestionController extends GameController implements Initializable 
     public void showResult() {
         Scene sceneResult = null;
         try {
-            sceneResult = new Scene(FXMLLoader.load(getClass().getResource("fxml/WoodsResults.fxml")));
+            sceneResult = new Scene(FXMLLoader.load(getClass().getResource("fxml/QuizResults.fxml")));
         } catch (IOException ignored) {}
         Main.stage.setScene(sceneResult);
         Main.stage.show();
