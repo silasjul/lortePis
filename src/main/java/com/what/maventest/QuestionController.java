@@ -4,18 +4,15 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class WoodsQuizQuestionController extends GameController implements Initializable {
+public class QuestionController extends GameController implements Initializable {
 
     @FXML
     private TextArea textAreaQuiz;
@@ -268,13 +265,13 @@ public class WoodsQuizQuestionController extends GameController implements Initi
     public void opt1clicked(ActionEvent event) {
         checkAnswer(opt1.getText());
         if (checkAnswer(opt1.getText())) {
-            Main.correctQuizAnswers++;
+            correct++;
         } else {
             wrong++;
         }
 
         if (counter == 14) {
-            Main.setScene("quizResults");
+            showResult();
         } else {
             counter++;
             loadWoodQuestions();
@@ -285,13 +282,13 @@ public class WoodsQuizQuestionController extends GameController implements Initi
     public void opt2clicked(ActionEvent event) {
         checkAnswer(opt2.getText());
         if (checkAnswer(opt2.getText())) {
-            Main.correctQuizAnswers++;
+            correct++;
         } else {
             wrong++;
         }
 
         if (counter == 14) {
-            Main.setScene("quizResults");
+            showResult();
         } else {
             counter++;
             loadWoodQuestions();
@@ -302,13 +299,13 @@ public class WoodsQuizQuestionController extends GameController implements Initi
     public void opt3clicked(ActionEvent event) {
         checkAnswer(opt3.getText());
         if (checkAnswer(opt3.getText())) {
-            Main.correctQuizAnswers++;
+            correct++;
         } else {
             wrong++;
         }
 
         if (counter == 14) {
-            Main.setScene("quizResults");
+            showResult();
         } else {
             counter++;
             loadWoodQuestions();
@@ -319,13 +316,13 @@ public class WoodsQuizQuestionController extends GameController implements Initi
     public void opt4clicked(ActionEvent event) {
         checkAnswer(opt4.getText());
         if (checkAnswer(opt4.getText())) {
-            Main.correctQuizAnswers++;
+            correct++;
         } else {
             wrong++;
         }
 
         if (counter == 14) {
-            Main.setScene("quizResults");
+            showResult();
         } else {
             counter++;
             loadWoodQuestions();
@@ -334,7 +331,15 @@ public class WoodsQuizQuestionController extends GameController implements Initi
 
     boolean checkAnswer(String answer) {
         String[] correctAnswer = {"C", "C", "D", "A", "B", "B", "C", "C", "A", "A", "D", "B", "D", "B", "C"};
-        System.out.println(Main.correctQuizAnswers);
         return correctAnswer[counter].equals(answer);
+    }
+
+    public void showResult() {
+        Scene sceneResult = null;
+        try {
+            sceneResult = new Scene(FXMLLoader.load(getClass().getResource("fxml/WoodsResults.fxml")));
+        } catch (IOException ignored) {}
+        Main.stage.setScene(sceneResult);
+        Main.stage.show();
     }
 }
