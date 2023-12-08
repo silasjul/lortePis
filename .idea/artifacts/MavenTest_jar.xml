@@ -2,7 +2,7 @@
   <artifact type="jar" name="MavenTest:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/MavenTest_jar</output-path>
     <root id="archive" name="MavenTest.jar">
-      <element id="module-output" name="MavenTest" />
+      <element id="module-output" name="ParkRanger" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/21-ea+24/javafx-controls-21-ea+24.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/21-ea+24/javafx-controls-21-ea+24-win.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-base/21-ea+24/javafx-base-21-ea+24-win.jar" path-in-jar="/" />
