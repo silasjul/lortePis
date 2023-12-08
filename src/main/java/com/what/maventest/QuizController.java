@@ -13,14 +13,11 @@ import java.util.ResourceBundle;
 public class QuizController implements Initializable {
 
     public Button continueButton;
-    public Button goBackToWoods;
 
     @FXML
     private TextArea textArea;
 
     private WoodsQuiz woodsQuiz;
-
-    private GameController gameController;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

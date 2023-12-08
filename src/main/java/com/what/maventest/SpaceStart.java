@@ -9,7 +9,7 @@ public class SpaceStart extends Space{
         images.put("background",new Image(getClass().getResource("Map/start.png").toString(), Main.width, Main.height, true, true));
 
         // NPC
-        npcs.add(new NPC("James Brown", 100, 120, 380, 300, "NPC/CoffeeMan.png", "#3C4AEA", true, "outside"));
+        npcs.add(new NPC("Joe Smoe", 100, 120, 380, 300, "NPC/CoffeeMan.png", "#3C4AEA", true, "outside"));
 
         // Animal
 

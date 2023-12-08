@@ -13,7 +13,7 @@
             <Image url="@image/Jeop37-72920SET_054.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="76.0" fitWidth="88.0" layoutX="131.0" layoutY="209.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="76.0" fitWidth="88.0" layoutX="172.0" layoutY="209.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/pixil-frame-0_3%20-%20Copy.png" />
          </image>
@@ -25,5 +25,10 @@
       </ImageView>
       <TextArea fx:id="textArea" layoutX="232.0" layoutY="358.0" prefHeight="144.0" prefWidth="414.0" />
       <Button fx:id="continueButton" layoutX="715.0" layoutY="418.0" mnemonicParsing="false" onAction="#continueQuizWoods" text="Continue" />
+      <ImageView fitHeight="76.0" fitWidth="79.0" layoutX="120.0" layoutY="208.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/pixil-frame-0_5%20-%20Copy.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
