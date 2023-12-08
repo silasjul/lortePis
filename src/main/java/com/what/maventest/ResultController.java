@@ -10,7 +10,7 @@ public class ResultController {
 
     @FXML
     public void initialize() {
-        WoodsResults.appendText(QuestionController.correct + "/16");
+        WoodsResults.appendText(QuestionController.correct + "/15");
 
         int correct = QuestionController.correct;
 
